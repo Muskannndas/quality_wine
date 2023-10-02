@@ -1,0 +1,6 @@
+metrics.plot_confusion_matrix(models[1], xtest, ytest)
+plt.show()
+
+  
+print(metrics.classification_report(ytest,
+									models[1].predict(xtest)))

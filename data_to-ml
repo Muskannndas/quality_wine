@@ -1,0 +1,10 @@
+models = [LogisticRegression(), XGBClassifier(), SVC(kernel='rbf')]
+
+for i in range(3):
+	models[i].fit(xtrain, ytrain)
+
+	print(f'{models[i]} : ')
+	print('Training Accuracy : ', metrics.roc_auc_score(ytrain, models[i].predict(xtrain)))
+	print('Validation Accuracy : ', metrics.roc_auc_score(
+		ytest, models[i].predict(xtest)))
+	print()

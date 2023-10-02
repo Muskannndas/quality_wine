@@ -1,0 +1,2 @@
+df.hist(bins=20, figsize=(10, 10))
+plt.show()

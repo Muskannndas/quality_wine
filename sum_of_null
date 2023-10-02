@@ -1,0 +1,5 @@
+for col in df.columns:
+if df[col].isnull().sum() > 0:
+	df[col] = df[col].fillna(df[col].mean())
+
+df.isnull().sum().sum()
